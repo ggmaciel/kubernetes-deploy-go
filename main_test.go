@@ -13,6 +13,8 @@ func TestHelloHandler(t *testing.T) {
 
 	helloHandler(w,r)
 
+	t.Fatalf("Error")
+	
 	if status := w.Code; status != http.StatusOK {
 		t.Fatalf("handler returned wrong status code: got %v want %v",
 			status, http.StatusOK)
